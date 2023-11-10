@@ -13,8 +13,10 @@ public class DemoApplication  implements ApplicationRunner {
 	}
 
 
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("runner");
 	}
 }
+//https://www.yiibai.com/spring-boot/spring_boot_application_properties.html
