@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.component.MyConfig;
+import com.example.demo.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -23,6 +24,9 @@ public class IndexController{
 
     @Autowired
     private MyConfig config;
+
+    @Autowired
+    private Person  person;
 
 //    @Autowired
 //    private RestTemplate restTemplate;
