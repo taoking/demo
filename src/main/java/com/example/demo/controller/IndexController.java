@@ -9,9 +9,14 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @RestController
 public class IndexController{
@@ -50,5 +55,9 @@ public class IndexController{
 //        System.out.println("create resttemplate");
 //        return new RestTemplate();
 //    }
+
+    private void PersonStream(List<Person> personList){
+        personList.stream().collect(Collectors.toMap(Person::getName, Function.identity()));
+    }
 
 }
